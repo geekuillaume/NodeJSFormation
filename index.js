@@ -1,6 +1,12 @@
 var http = require('http');
 
-http.createServer(function(request, response) {
+server = http.createServer(); // server est ici une objet héritant d'EventEmitter
+server.listen(8080); // On indique le port sur lequel le serveur doit écouter
+
+server.on("request", function(request, response) { // L'event 'request' est émit lors de l'arrivée d'une nouvelle requête
+
+    // request est un objet héritant de stream.Readable
+    // response est un objet héritant de stream.Writable
 
     // On peut accéder aux headers client avec : request.headers
     var toSend = "Hello World from " + request.headers.host + "!";
@@ -17,4 +23,4 @@ http.createServer(function(request, response) {
     // Puis on ferme la connexion
     response.end();
 
-}).listen(8080);
+});

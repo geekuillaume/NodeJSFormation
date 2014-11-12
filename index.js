@@ -22,7 +22,13 @@ app.get('/user/:name/:lastName?', function(req, res) { // les paramètres sont d
     else {
         res.send("Getting user: " + name);
     }
-})
+});
+
+// On peut aussi indiquer à Express de servir des fichiers statiques
+app.use("/media", express.static(__dirname + '/media'));
+
+// A partir d'Express 4, on peut découper ses routes et ensuite les injecter beaucoup plus facilement
+app.use("/test", require(__dirname + "/test.js"));
 
 var server = app.listen(8080, function () { // De même qu'avec http, on lance l'écoute sur le port 8080
 

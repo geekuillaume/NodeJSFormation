@@ -1,0 +1,23 @@
+{
+  "name": "FormationNodeJS",
+  "version": "1.0.0",
+  "description": "Ce dépôt contient le code support pour la formation Node.js que j'anime.",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekuillaume/NodeJSFormation.git"
+  },
+  "author": "Guillaume Besson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geekuillaume/NodeJSFormation/issues"
+  },
+  "homepage": "https://github.com/geekuillaume/NodeJSFormation"
+}
